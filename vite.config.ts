@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
       ...(mode === 'test' ? [] : [federation({
         name: 'catalog',
         filename: 'remoteEntry.js',
-        exposes: { './Page': './src/Page.tsx' },
+        exposes: { './CatalogPage': './src/Page.tsx' },
         // The host provides auth, the API client and the cart event bus through `host/ui`.
         remotes: { host: { external: env.REMOTE_HOST_URL ?? 'http://localhost:5000/assets/remoteEntry.js', from: 'vite', externalType: 'url' } },
         shared: ['react', 'react-dom', 'react-router-dom', '@shoplab/ui-kit'],
