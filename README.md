@@ -2,7 +2,7 @@
 
 Catalog remote: listing, category filter, search and sort, product page, add to cart. React + Vite.
 
-**Exposes** `./Page` with props `onAddToCart(productId)` and `currency`.
+**Exposes** `./CatalogPage` with props `onAddToCart(productId)` and `currency`.
 **Consumes** `host/ui` (`useAuth`, `authFetch`, `emitCartUpdated`), `@shoplab/ui-kit` (`PriceTag`, `FormField`, `ApiError`, shared singleton).
 **HTTP:** `GET /products?category&page`, `GET /products/:id`, `GET /search?q&sort`, `GET /categories`, `POST /cart/items`.
 **Browser state:** URL query params `category`, `q`, `sort`, `page`, `product`; `localStorage.cartId` (guest cart id, written here and by the cart remote, merged by the host after login).
